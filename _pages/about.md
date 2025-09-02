@@ -2,16 +2,16 @@
 layout: about
 title: About
 permalink: /
-subtitle: Director, <a href='#'>Generative AI Models Lab</a>, Sharif University of Technology
+subtitle: <a href='#'>Generative AI Models Lab</a>, Sharif University of Technology
 
 profile:
   align: right
   image: GAIM.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Generative AI Models Lab</p>
-    <p>Department of Electrical Engineering</p>
-    <p>Sharif University of Technology</p>
+    <p><b>Generative AI Models Lab</b></p>
+    <p style="font-size: 0.6em;">Department of Electrical Engineering</p>
+    <p style="font-size: 0.6em;">Sharif University of Technology</p>
     <p>Tehran, Iran</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
