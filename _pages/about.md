@@ -9,10 +9,10 @@ profile:
   image: GAIM.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p><b>Generative AI Models Lab</b></p>
+    <p style="font-size: 0.6em;"><b>Generative AI Models Lab</b></p>
     <p style="font-size: 0.6em;">Department of Electrical Engineering</p>
     <p style="font-size: 0.6em;">Sharif University of Technology</p>
-    <p>Tehran, Iran</p>
+    <p style="font-size: 0.6em;">Tehran, Iran</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
