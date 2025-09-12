@@ -264,8 +264,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Amini, Eshtehardian]  # Add your lab members' last names here
+  first_name: [Sajjad, "Seyed Mohammad"]  # Add first names matching the last names
 
   style: apa
   locale: en
