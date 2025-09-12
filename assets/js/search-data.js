@@ -38,8 +38,8 @@ ninja.data = [{
             window.location.href = "/teaching/";
           },
         },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
+          title: "People",
+          description: "Meet our distinguished researchers and team members driving innovation in AI and machine learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
