@@ -6,7 +6,7 @@ subtitle: Generative AI Models Lab, Sharif University of Technology
 
 profile:
   align: right
-  image: GAIM.png
+  image: GAIM.svg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p style="font-size: 0.8em;"><b>Generative AI Models Lab</b></p>
