@@ -28,7 +28,7 @@ profiles:
       <div style="font-size: 0.9rem; line-height: 1.4;">
         <p style="margin-bottom: 0.3rem;"><i class="fas fa-envelope"></i> m.eshtehardian@yahoo.com</p>
         <p style="margin-bottom: 0.3rem;"><i class="fas fa-graduation-cap"></i> PhD Student</p>
-        <p style="margin-bottom: 0.3rem;"><i class="fas fa-university"></i> Electrical Engineering Department</p>
+        <p style="margin-bottom: 0.3rem;"><i class="fas fa-university"></i> EE Department</p>
         <p style="margin-bottom: 0.3rem;"><i class="fas fa-map-marker-alt"></i> Sharif University of Technology</p>
       </div>
 ---
