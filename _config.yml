@@ -264,23 +264,36 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Amini, Eshtehardian]  # Add your lab members' last names here
-  first_name: [Sajjad, "Seyed Mohammad"]  # Add first names matching the last names
-
+  # Basic configuration
   style: apa
   locale: en
-
-  source: /_bibliography/
+  
+  # Bibliography files
+  source: ./_bibliography/
   bibliography: papers.bib
   bibliography_template: bib
-  # Note: if you have latex math in your bibtex, the latex filter
-  # preprocessing may conflict with MathJAX if the latter is enabled.
-  # See https://github.com/alshedivat/al-folio/issues/357.
+  
+  # Name formatting
+  name_separator: ' and '
+  and_string: ' and '
+  et_al: 3  # Number of authors before using et al.
+  
+  # Sorting
+  sort_by: year
+  order: descending
+  group_by: year
+  
+  # Output
+  quote: ''
+  span_class: ''
+  span_id: ''
+  
+  # Filters
   bibtex_filters: [latex, smallcaps, superscript]
-
   replace_strings: true
   join_strings: true
-
+  
+  # Details
   details_dir: bibliography
   details_link: Details
 
