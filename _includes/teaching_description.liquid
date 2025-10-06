@@ -1,7 +1,22 @@
 <div class="col">
   <div class="card h-100">
     <div class="card-body">
-      {{ teaching.description | markdownify }}
+      <h3 class="card-title">{{ teaching.title }}</h3>
+      {% if teaching.semester %}
+        <p class="text-muted mb-3">
+          <i class="far fa-calendar-alt"></i> {{ teaching.semester }}
+        </p>
+      {% endif %}
+      <div class="card-text mb-3">
+        {{ teaching.description | markdownify }}
+      </div>
+      {% if teaching.website %}
+        <div class="mt-auto">
+          <a href="{{ teaching.website }}" class="btn btn-outline-primary btn-sm" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Course Website
+          </a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

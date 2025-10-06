@@ -9,7 +9,7 @@ semester: "Fall 2024"
 description: "A comprehensive graduate course on modern deep generative models, covering both theoretical foundations and practical applications."
 date: 2024-09-01
 location: "Tehran, Iran"
-category: "Computer Science"
+category: "Graduate"
 website: "https://generative-ai-sut.github.io/"
 ---
 
