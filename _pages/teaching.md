@@ -8,35 +8,55 @@ nav_order: 6
 ---
 
 <div class="teaching">
-  <!-- Display categorized teaching -->
-  <h2 class="category">Graduate Courses</h2>
-  <div class="grid">
-    {% assign sorted_teaching = site.teaching | where: "category", "Graduate" | sort: "date" | reverse %}
-    {% for teaching in sorted_teaching %}
-      {% include teaching.liquid %}
-    {% endfor %}
+  <div class="teaching-section">
+    <h2 class="category">Graduate Courses</h2>
+    <div class="grid">
+      {% assign sorted_teaching = site.teaching | where: "category", "Graduate" | sort: "date" | reverse %}
+      {% for teaching in sorted_teaching %}
+        {% include teaching.liquid %}
+      {% endfor %}
+    </div>
   </div>
 
-  <h2 class="category">Undergraduate Courses</h2>
-  <div class="grid">
-    {% assign sorted_teaching = site.teaching | where: "category", "Undergraduate" | sort: "date" | reverse %}
-    {% for teaching in sorted_teaching %}
-      {% include teaching.liquid %}
-    {% endfor %}
+  <div class="teaching-section">
+    <h2 class="category">Undergraduate Courses</h2>
+    <div class="grid">
+      {% assign sorted_teaching = site.teaching | where: "category", "Undergraduate" | sort: "date" | reverse %}
+      {% for teaching in sorted_teaching %}
+        {% include teaching.liquid %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
 <style>
+  .teaching-section {
+    clear: both;
+    overflow: auto;
+    padding-top: 1rem;
+  }
+
   .teaching .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    width: 100%;
   }
   
   .teaching .col {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .teaching .col > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
   
   .teaching .card {
