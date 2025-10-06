@@ -18,8 +18,15 @@ A comprehensive graduate course on modern deep generative models, covering both 
 
 ## Information
 - **Instructor**: Sajjad Amini
+- **Credits**: 3
 - **Lectures**: 3 hours per week
 - **Office Hours**: 1 hour per week
+
+## Prerequisites
+- Probability and Statistics
+- Machine Learning
+- Deep Learning
+- Linear Algebra
 
 ## Objectives
 - Foundational understanding of deep generative models
@@ -45,9 +52,3 @@ A comprehensive graduate course on modern deep generative models, covering both 
 
 ## Resources
 All course materials, including slides, assignments, and additional resources, are available on the [course website](https://generative-ai-sut.github.io/).
-
-## Prerequisites
-- Probability and Statistics
-- Machine Learning
-- Deep Learning
-- Linear Algebra
