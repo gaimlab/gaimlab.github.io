@@ -32,7 +32,7 @@ nav_order: 6
 <style>
   .teaching-section {
     clear: both;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1rem;
   }
 
