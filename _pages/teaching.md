@@ -31,9 +31,10 @@ nav_order: 6
 
 <style>
   .teaching-section {
+    display: flow-root;
     clear: both;
-    overflow: visible;
     padding-top: 1rem;
+    margin-bottom: 5rem;
   }
 
   .teaching .grid {
