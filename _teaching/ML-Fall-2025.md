@@ -3,11 +3,11 @@ title: "Introduction to Machine Learning"
 collection: teaching
 type: "Undergraduate Course"
 layout: teaching
-permalink: /teaching/ML-Spring-2023
+permalink: /teaching/ML-Fall-2025
 venue: "Sharif University of Technology"
-semester: "Spring 2023"
+semester: "Fall 2025"
 description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications."
-date: 2023-01-01
+date: 2025-01-01
 location: "Tehran, Iran"
 category: "Undergraduate"
 ---

@@ -86,10 +86,15 @@ nav_order: 6
   }
   
   .teaching .category {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
     font-weight: 600;
+    clear: both;
+  }
+  
+  .teaching .category:first-of-type {
+    margin-top: 1rem;
   }
   
   @media (max-width: 768px) {
