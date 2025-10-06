@@ -38,7 +38,7 @@ ninja.data = [{
             window.location.href = "/teaching/";
           },
         },{id: "nav-people",
-          title: "People",
+          title: "people",
           description: "Meet our distinguished researchers and team members driving innovation in AI and machine learning.",
           section: "Navigation",
           handler: () => {
@@ -132,11 +132,26 @@ ninja.data = [{
           description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications.",
           section: "Teaching",handler: () => {
               window.location.href = "/teaching/ML-Spring-2023";
+            },},{id: "teaching-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications.",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/ML-Spring-2023";
+            },},{id: "teaching-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications.",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/ML-Spring-2023";
             },},{id: "teaching-deep-generative-models",
           title: 'Deep Generative Models',
           description: "A comprehensive graduate course on modern deep generative models, covering both theoretical foundations and practical applications.",
           section: "Teaching",handler: () => {
               window.location.href = "/teaching/DGM-Fall-2024";
+            },},{id: "teaching-deep-generative-models",
+          title: 'Deep Generative Models',
+          description: "A comprehensive graduate course on modern deep generative models, covering both theoretical foundations and practical applications.",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/DGM-Fall-2025";
             },},{
         id: 'social-email',
         title: 'email',
