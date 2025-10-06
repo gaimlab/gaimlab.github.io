@@ -1,0 +1,47 @@
+<div class="col">
+  <a href="{% if teaching.redirect %}{{ teaching.redirect }}{% else %}{{ teaching.url | relative_url }}{% endif %}" {% if teaching.redirect %}target="_blank"{% endif %}>
+    <div class="card h-100 hoverable">
+      {% if teaching.img %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=teaching.img
+          sizes = "250px"
+          alt="course thumbnail"
+          class="card-img-top"
+        %}
+      {% endif %}
+      <div class="card-body">
+        <h2 class="card-title">{{ teaching.title }}</h2>
+        <p class="card-text">
+          <small class="text-muted">
+            <i class="fas fa-calendar-alt"></i> {{ teaching.semester | default: teaching.date | date: "%B %Y" }}
+            <br>
+            <i class="fas fa-university"></i> {{ teaching.venue }}
+            {% if teaching.role %}
+              <br>
+              <i class="fas fa-user-tie"></i> {{ teaching.role }}
+            {% endif %}
+          </small>
+        </p>
+        <p class="card-text">{{ teaching.excerpt | markdownify | strip_html | truncate: 200 }}</p>
+        <div class="row ml-1 mr-1 p-0">
+          {% if teaching.website %}
+            <div class="github-icon">
+              <div class="icon" data-toggle="tooltip" title="Course Website">
+                <a href="{{ teaching.website }}" target="_blank"><i class="fas fa-globe"></i></a>
+              </div>
+            </div>
+          {% endif %}
+          {% if teaching.github %}
+            <div class="github-icon">
+              <div class="icon" data-toggle="tooltip" title="Course Materials">
+                <a href="{{ teaching.github }}" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
