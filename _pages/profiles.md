@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /people/
-title: People
+title: people
 description: Meet our distinguished researchers and team members driving innovation in AI and machine learning.
 nav: true
 nav_order: 7
