@@ -33,8 +33,8 @@ nav_order: 6
   .teaching-section {
     display: flow-root;
     clear: both;
-    padding-top: 1rem;
-    margin-bottom: 5rem;
+    padding-top: 3rem;
+    margin-bottom: 10rem;
   }
 
   .teaching .grid {
