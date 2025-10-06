@@ -21,4 +21,16 @@ profiles:
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-university"></i> Electrical Engineering Department</p>
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-map-marker-alt"></i> Sharif University of Technology</p>
       </div>
+
+  - align: right
+    image: GAIM.svg # Replace with your photo in assets/img/
+    content: about_mohammadhossein.md
+    image_circular: false
+    more_info: >
+      <div style="font-size: 0.9rem; line-height: 1.4;">
+        <p style="margin-bottom: 0.2rem;"><i class="fas fa-envelope"></i> momenihamaneh1381@gmail.com</p>
+        <p style="margin-bottom: 0.2rem;"><i class="fas fa-graduation-cap"></i> MSc Student</p>
+        <p style="margin-bottom: 0.2rem;"><i class="fas fa-university"></i> Electrical Engineering Department</p>
+        <p style="margin-bottom: 0.2rem;"><i class="fas fa-map-marker-alt"></i> Sharif University of Technology</p>
+      </div>
 ---
