@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+          description: "A collection of courses I have taught at various institutions.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -468,6 +468,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "teaching-deep-generative-models",
+          title: 'Deep Generative Models',
+          description: "",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/DGM-Fall-2024";
             },},{
         id: 'social-email',
         title: 'email',
