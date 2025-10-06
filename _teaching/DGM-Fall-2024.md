@@ -6,64 +6,48 @@ layout: teaching
 permalink: /teaching/DGM-Fall-2024
 venue: "Sharif University of Technology"
 semester: "Fall 2024"
+description: "A comprehensive graduate course on modern deep generative models, covering both theoretical foundations and practical applications."
 date: 2024-09-01
 location: "Tehran, Iran"
-category: "Graduate"
+category: "Computer Science"
 website: "https://generative-ai-sut.github.io/"
-prerequisites:
-  - "Machine Learning"
-  - "Deep Learning"
-  - "Probability and Statistics"
-  - "Strong programming skills in Python"
-  - "Familiarity with PyTorch or TensorFlow"
 ---
 
-## Course Overview
-This graduate course explores deep generative models, combining theoretical foundations with practical applications. Students will gain hands-on experience with state-of-the-art architectures and their real-world implementations.
+## Overview
+A comprehensive graduate course on modern deep generative models, covering both theoretical foundations and practical applications.
 
-## Course Objectives
-- Understand theoretical foundations of deep generative models
-- Master various architectures and their mathematical formulations
-- Gain practical experience in implementing and training models
-- Explore cutting-edge research and applications
-- Develop critical evaluation skills for generative models
-
-## Course Structure
-### Topics Covered
-1. **Introduction to Generative Modeling**
-   - Fundamentals and applications
-   - Evaluation metrics
-   - Current challenges
-
-2. **Core Architectures**
-   - Variational Autoencoders (VAEs)
-   - Generative Adversarial Networks (GANs)
-   - Normalizing Flows
-   - Diffusion Models
-   - Energy-Based Models
-
-3. **Advanced Topics**
-   - Transformers for generation
-   - Multimodal generation
-   - Applications in CV, NLP, and beyond
-
-### Course Format
+## Information
+- **Instructor**: Sajjad Amini
 - **Lectures**: 3 hours per week
-- **Programming Assignments**
-- **Research Paper Readings**
-- **Final Project**
+- **Office Hours**: 1 hour per week
+
+## Objectives
+- Foundational understanding of deep generative models
+- Working with different types of generative models suitable for different types of modalities
+- Training and optimization procedures
+- Real-world applications
+
+## Topics Covered
+- Deep Autoregressive Models
+- Deep Variational Autoencoders
+- Normalizing Flow Models
+- Generative Adverasrial Nets
+- Energy-Based Models
+- Diffusion Models
+- Evaluation Methods
 
 ## Grading
 - **Assignments**: 40%
-- **Midterm Exam**: 20%
-- **Final Project**: 30%
-- **Class Participation**: 10%
+- **Midterm Exams**: 20%
+- **Final Project**: 20%
+- **Final Exam**: 20%
+- **Class Participation**: 5%
 
 ## Resources
 All course materials, including slides, assignments, and additional resources, are available on the [course website](https://generative-ai-sut.github.io/).
 
 ## Prerequisites
-- Strong programming skills in Python
-- Familiarity with PyTorch or TensorFlow
-- Background in machine learning and deep learning
-- Basic understanding of probability and linear algebra
+- Probability and Statistics
+- Machine Learning
+- Deep Learning
+- Linear Algebra
