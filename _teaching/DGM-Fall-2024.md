@@ -8,7 +8,7 @@ venue: "Sharif University of Technology"
 semester: "Fall 2024"
 date: 2024-09-01
 location: "Tehran, Iran"
-category: "Computer Science"
+category: "Graduate"
 website: "https://generative-ai-sut.github.io/"
 prerequisites:
   - "Machine Learning"
