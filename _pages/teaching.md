@@ -13,7 +13,7 @@ nav_order: 6
   <div class="grid">
     {% assign sorted_teaching = site.teaching | where: "category", "Graduate" | sort: "date" | reverse %}
     {% for teaching in sorted_teaching %}
-      {% include teaching_description.liquid %}
+      {% include teaching.liquid %}
     {% endfor %}
   </div>
 
@@ -21,7 +21,7 @@ nav_order: 6
   <div class="grid">
     {% assign sorted_teaching = site.teaching | where: "category", "Undergraduate" | sort: "date" | reverse %}
     {% for teaching in sorted_teaching %}
-      {% include teaching_description.liquid %}
+      {% include teaching.liquid %}
     {% endfor %}
   </div>
 </div>

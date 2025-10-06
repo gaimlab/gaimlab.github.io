@@ -24,12 +24,12 @@
             {% endif %}
           </small>
         </p>
-        <p class="card-text">{{ teaching.excerpt | markdownify | strip_html | truncate: 200 }}</p>
+        <p class="card-text">{{ teaching.description | markdownify | strip_html | truncate: 200 }}</p>
         <div class="row ml-1 mr-1 p-0">
           {% if teaching.website %}
             <div class="github-icon">
               <div class="icon" data-toggle="tooltip" title="Course Website">
-                <a href="{{ teaching.website }}" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="{{ teaching.website }}" target="_blank"><i class="fas fa-external-link-alt"></i> Course Website</a>
               </div>
             </div>
           {% endif %}
