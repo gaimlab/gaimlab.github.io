@@ -470,7 +470,7 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "teaching-deep-generative-models",
           title: 'Deep Generative Models',
-          description: "",
+          description: "A comprehensive graduate course on modern deep generative models, covering both theoretical foundations and practical applications.",
           section: "Teaching",handler: () => {
               window.location.href = "/teaching/DGM-Fall-2024";
             },},{
