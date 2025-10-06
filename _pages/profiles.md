@@ -15,7 +15,7 @@ profiles:
     content: about_mohammad.md
     image_circular: false
     more_info: >
-      <div style="font-size: 0.9rem; line-height: 1.4;">
+      <div style="font-size: 0.8rem; line-height: 1.4;">
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-envelope"></i> m.eshtehardian@yahoo.com</p>
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-graduation-cap"></i> PhD Student</p>
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-university"></i> Electrical Engineering Department</p>
@@ -23,11 +23,11 @@ profiles:
       </div>
 
   - align: right
-    image: GAIM.svg # Replace with your photo in assets/img/
+    image: mohammadhossein.jpg # Replace with your photo in assets/img/
     content: about_mohammadhossein.md
     image_circular: false
     more_info: >
-      <div style="font-size: 0.9rem; line-height: 1.4;">
+      <div style="font-size: 0.8rem; line-height: 1.4;">
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-envelope"></i> momenihamaneh1381@gmail.com</p>
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-graduation-cap"></i> MSc Student</p>
         <p style="margin-bottom: 0.2rem;"><i class="fas fa-university"></i> Electrical Engineering Department</p>

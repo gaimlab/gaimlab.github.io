@@ -9,6 +9,7 @@ semester: "Fall 2025"
 description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications."
 date: 2025-01-01
 location: "Tehran, Iran"
+img: assets/img/IML.png
 category: "Undergraduate"
 ---
 

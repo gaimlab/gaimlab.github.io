@@ -8,6 +8,7 @@ venue: "Sharif University of Technology"
 semester: "Spring 2023"
 description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications."
 date: 2023-01-01
+img: assets/img/IML.png
 location: "Tehran, Iran"
 category: "Undergraduate"
 ---

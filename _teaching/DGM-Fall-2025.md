@@ -10,6 +10,7 @@ description: "A comprehensive graduate course on modern deep generative models, 
 date: 2025-09-01
 location: "Tehran, Iran"
 category: "Graduate"
+img: assets/img/DGM.png
 website: "https://generative-ai-sut.github.io/"
 ---
 

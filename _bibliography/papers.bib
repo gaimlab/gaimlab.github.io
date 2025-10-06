@@ -1,42 +1,12 @@
----
----
-
-@string{aps = {American Physical Society,}}
-
-@comment{
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  inspirehep_id = {3255}
-}
-}
-
 @article{tanevardi2025measurement,
   title={Measurement-Guided Consistency Model Sampling for Inverse Problems},
   author={Tanevardi, Amirreza and Moghadam, Pooria Abbas Rad and Amini, Sajjad},
   journal={arXiv preprint arXiv:2510.02208},
+  pdf={2510.02208v1.pdf},
+  preview={MGCMS.png},
+  abstract={Diffusion models have become powerful generative priors for solving inverse imaging problems, but their reliance on slow multi-step sampling limits practical deployment. Consistency models address this bottleneck by enabling high-quality generation in a single or only a few steps, yet their direct adaptation to inverse problems is underexplored. In this paper, we present a modified consistency sampling approach tailored for inverse problem reconstruction: the sampler's stochasticity is guided by a measurement-consistency mechanism tied to the measurement operator, which enforces fidelity to the acquired measurements while retaining the efficiency of consistency-based generation. Experiments on Fashion-MNIST and LSUN Bedroom datasets demonstrate consistent improvements in perceptual and pixel-level metrics, including Fréchet Inception Distance, Kernel Inception Distance, peak signal-to-noise ratio, and structural similarity index measure, compared to baseline consistency sampling, yielding competitive or superior reconstructions with only a handful of steps.},
   year={2025},
+  keywords={vector-field, inverse-problems},
   bibtex_show={true}
 }
 
@@ -44,7 +14,10 @@
   title={A Survey on Non-Intrusive ASR Refinement: From Output-Level Correction to Full-Model Distillation},
   author={Peyghan, Mohammad Reza and Rajabi, Fatemeh and Roudi, Saman Soleimani and Zouashkiani, Saeedreza and Amini, Sajjad and Ghaemmaghami, Shahrokh},
   journal={arXiv preprint arXiv:2508.07285},
+  abstract={Automatic Speech Recognition (ASR) has become an integral component of modern technology, powering applications such as voice-activated assistants, transcription services, and accessibility tools. Yet ASR systems continue to struggle with the inherent variability of human speech, such as accents, dialects, and speaking styles, as well as environmental interference, including background noise. Moreover, domain-specific conversations often employ specialized terminology, which can exacerbate transcription errors. These shortcomings not only degrade raw ASR accuracy but also propagate mistakes through subsequent natural language processing pipelines. Because redesigning an ASR model is costly and time-consuming, non-intrusive refinement techniques that leave the model's architecture unchanged have become increasingly popular. In this survey, we systematically review current non-intrusive refinement approaches and group them into five classes: fusion, re-scoring, correction, distillation, and training adjustment. For each class, we outline the main methods, advantages, drawbacks, and ideal application scenarios. Beyond method classification, this work surveys adaptation techniques aimed at refining ASR in domain-specific contexts, reviews commonly used evaluation datasets along with their construction processes, and proposes a standardized set of metrics to facilitate fair comparisons. Finally, we identify open research gaps and suggest promising directions for future work. By providing this structured overview, we aim to equip researchers and practitioners with a clear foundation for developing more robust, accurate ASR refinement pipelines. },
   year={2025},
+  pdf={2508.07285v1.pdf},
+  preview={Non-Instructive-ASR-Refinement.png},
   bibtex_show={true}
 }
 
@@ -57,6 +30,7 @@
   preview={LORE.png},
   pdf={2505.18884v1.pdf},
   selected={true},
+  keywords = {vector-field, trustworthy},
   bibtex_show={true}
 }
 
@@ -66,6 +40,8 @@
   booktitle={2025 13th Iran Workshop on Communication and Information Theory (IWCIT)},
   pages={1--6},
   year={2025},
+  doi={10.1109/IWCIT67595.2025.11073010},
+  keywords={vector-field, trustworthy},
   organization={IEEE},
   bibtex_show={true}
 }
@@ -74,6 +50,7 @@
   title={GEC-RAG: Improving Generative Error Correction via Retrieval-Augmented Generation for Automatic Speech Recognition Systems},
   author={Robatian, Amin and Hajipour, Mohammad and Peyghan, Mohammad Reza and Rajabi, Fatemeh and Amini, Sajjad and Ghaemmaghami, Shahrokh and Gholampour, Iman},
   journal={arXiv preprint arXiv:2501.10734},
+  keywords={vector-field},
   year={2025},
   bibtex_show={true}
 }
@@ -91,9 +68,12 @@
   author={Amini, Sajjad and Teymoorianfard, Mohammadreza and Ma, Shiqing and Houmansadr, Amir},
   journal={arXiv preprint arXiv:2406.05927},
   year={2024},
+  abstract={We present a simple yet effective method to improve the robustness of both Convolutional and attention-based Neural Networks against adversarial examples by post-processing an adversarially trained model. Our technique, MeanSparse, cascades the activation functions of a trained model with novel operators that sparsify mean-centered feature vectors. This is equivalent to reducing feature variations around the mean, and we show that such reduced variations merely affect the model's utility, yet they strongly attenuate the adversarial perturbations and decrease the attacker's success rate. Our experiments show that, when applied to the top models in the RobustBench leaderboard, MeanSparse achieves a new robustness record of 75.28% (from 73.71%), 44.78% (from 42.67%) and 62.12% (from 59.56%) on CIFAR-10, CIFAR-100 and ImageNet, respectively, in terms of AutoAttack accuracy.},
   pdf={2406.05927v2.pdf},
+  preview={MeanSparse.png},
   additional_info={. *More Information* can be [found here](https://github.com/SPIN-UMass/MeanSparse)},
   bibtex_show={true},
+  keywords={trustworthy},
   selected={true}
 }
 
@@ -111,19 +91,19 @@
   journal={Engineering Applications of Artificial Intelligence},
   volume={127},
   pages={107360},
+  keywords={trustworthy},
   year={2024},
   publisher={Elsevier},
   bibtex_show={true}
 }
 
 @article{heshmati2022designing,
-  title={Designing Low Coherent Measurement Matrix With Controlled Spectral Norm Via an Efficient Approximation of $\ell_\infty$-Norm},
+  title={Designing Low Coherent Measurement Matrix With Controlled Spectral Norm Via an Efficient Approximation of $l_{\infty}$-Norm},
   author={Heshmati, Alireza and Amini, Sajjad and Ghaemmaghami, Shahrokh and Marvasti, Farokh},
   journal={IEEE Signal Processing Letters},
   volume={29},
   pages={2243--2247},
   year={2022},
-  publisher={IEEE},
   bibtex_show={true}
 }
 
@@ -134,6 +114,7 @@
   pages={4053--4057},
   year={2022},
   organization={IEEE},
+  keywords={trustworthy},
   bibtex_show={true}
 }
 
@@ -160,6 +141,7 @@
   url={https://ieeexplore.ieee.org/abstract/document/8970483},
   year={2020},
   publisher={IEEE},
+  keywords={trustworthy},
   selected={true},
   bibtex_show={true}
 }

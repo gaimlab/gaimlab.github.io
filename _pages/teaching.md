@@ -5,66 +5,73 @@ permalink: /teaching/
 description: "Explore our comprehensive courses in deep generative models, machine learning, and artificial intelligence. Our curriculum bridges theoretical foundations with practical applications, preparing students for cutting-edge research and industry challenges in AI. Browse our graduate and undergraduate course offerings to advance your expertise in modern machine learning."
 nav: true
 nav_order: 6
+display_categories: [Graduate, Undergraduate]
+horizontal: false
 ---
 
+<!-- pages/teaching.md -->
 <div class="teaching">
-  <div class="teaching-section">
-    <h2 class="category">Graduate Courses</h2>
-    <div class="grid">
-      {% assign sorted_teaching = site.teaching | where: "category", "Graduate" | sort: "date" | reverse %}
-      {% for teaching in sorted_teaching %}
-        {% include teaching.liquid %}
-      {% endfor %}
+{% if site.enable_teaching_categories and page.display_categories %}
+  <!-- Display categorized teaching -->
+  {% for category in page.display_categories %}
+  <a id="{{ category | downcase }}" href="#{{ category | downcase }}">
+    <h2 class="category">{{ category }} Courses</h2>
+  </a>
+  {% assign categorized_teaching = site.teaching | where: "category", category | sort: "date" | reverse %}
+  <!-- Generate cards for each teaching item -->
+  {% if page.horizontal %}
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+    {% for teaching in categorized_teaching %}
+      {% include teaching_horizontal.liquid %}
+    {% endfor %}
     </div>
   </div>
+  {% else %}
+  <div class="row">
+    {% for teaching in categorized_teaching %}
+    <div class="col-12 col-md-6 mb-4">
+      {% include teaching.liquid %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endfor %}
 
-  <div class="teaching-section">
-    <h2 class="category">Undergraduate Courses</h2>
-    <div class="grid">
-      {% assign sorted_teaching = site.teaching | where: "category", "Undergraduate" | sort: "date" | reverse %}
-      {% for teaching in sorted_teaching %}
-        {% include teaching.liquid %}
-      {% endfor %}
+{% else %}
+<!-- Display teaching without categories -->
+{% assign sorted_teaching = site.teaching | sort: "date" | reverse %}
+
+  <!-- Generate cards for each teaching item -->
+  {% if page.horizontal %}
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+    {% for teaching in sorted_teaching %}
+      {% include teaching_horizontal.liquid %}
+    {% endfor %}
     </div>
   </div>
+  {% else %}
+  <div class="row">
+    {% for teaching in sorted_teaching %}
+    <div class="col-12 col-md-6 mb-4">
+      {% include teaching.liquid %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endif %}
 </div>
 
 <style>
-  .teaching-section {
-    display: flow-root;
-    clear: both;
-    padding-top: 3rem;
-    margin-bottom: 10rem;
-  }
-
-  .teaching .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-    width: 100%;
-  }
-  
-  .teaching .col {
-    display: block;
-    position: static !important;
-    float: none !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .teaching .col > a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-  
   .teaching .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
   }
   
   .teaching .card:hover {
@@ -86,6 +93,19 @@ nav_order: 6
   .teaching .card-text {
     font-size: 0.9rem;
     flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .teaching .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .teaching .col-md-6 {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   
   .teaching .text-muted {
@@ -111,7 +131,6 @@ nav_order: 6
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
     font-weight: 600;
-    clear: both;
   }
   
   .teaching .category:first-of-type {
@@ -119,9 +138,12 @@ nav_order: 6
   }
   
   @media (max-width: 768px) {
-    .teaching .grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .teaching .row {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+    .teaching .col {
+      padding: 0 0.5rem;
     }
   }
 </style>
