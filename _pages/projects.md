@@ -1,16 +1,22 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: research
+permalink: /research/
+description: Research areas and related works.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
+<!-- pages/research.md -->
 <div class="projects">
+  <!-- Research anchors -->
+  <div class="mb-3">
+    <a id="vfgaim"></a>
+    <a id="trustworthy-ml"></a>
+    <a id="rl"></a>
+  </div>
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
