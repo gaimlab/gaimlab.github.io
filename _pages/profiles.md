@@ -9,11 +9,13 @@ nav_order: 7
 # Populate these lists with your members. Images should live in assets/img/
 faculty:
   - name: Sajjad Amini
+    image: sajjad.jpg
     university: Sharif University of Technology
-    department: Electrical Engineering
+    department: Electronics Research Institute
+    content: about_sajjad.md
     links:
     - label: Email
-      url: mailto:s_amini@sharif.edu 
+      url: mailto:s-amini@sharif.edu 
 phd:
   - name: Mohammad Eshtehardian
     image: mohammad.jpg
@@ -219,26 +221,39 @@ collaborators: []
 </div>
 
 <style>
-  #people-page .people-section { margin-bottom: 2rem; }
+  #people-page .people-section { 
+    margin-bottom: 3rem;
+  }
   #people-page .grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  #people-page .person-card {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
   }
   @media (max-width: 992px) { 
-    #people-page .grid { 
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.25rem;
-    } 
+    #people-page .person-card {
+      flex: 0 0 calc(50% - 30px);
+    }
   }
-  @media (max-width: 576px) { 
-    #people-page .grid { 
-      grid-template-columns: 1fr;
-      gap: 1rem;
+  @media (max-width: 768px) { 
+    #people-page .grid {
+      margin: 0 -10px;
     }
     #people-page .person-card {
-      padding: 1rem;
+      flex: 0 0 calc(50% - 20px);
+      margin: 0 10px 20px;
+    }
+  }
+  @media (max-width: 576px) { 
+    #people-page .grid {
+      margin: 0;
+    }
+    #people-page .person-card {
+      flex: 0 0 100%;
+      margin: 0 0 20px;
     }
   }
 
@@ -248,19 +263,22 @@ collaborators: []
     background: var(--global-card-bg-color, #fff);
     color: var(--global-text-color, #000);
     box-shadow: 0 2px 10px var(--global-shadow-color, rgba(0,0,0,.04));
-    padding: 1.25rem;
+    padding: 1.5rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
-    height: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
   }
   #people-page .person-card:hover { 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 18px var(--global-shadow-hover, rgba(0,0,0,.1));
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 24px var(--global-shadow-hover, rgba(0,0,0,.1));
     border-color: var(--global-theme-color, #4f46e5);
+  }
+  #people-page .person-card:hover .person-media img {
+    transform: scale(1.05);
   }
   #people-page .person-card:focus { 
     box-shadow: 0 0 0 3px var(--global-theme-color, rgba(79,70,229,.25)); 
@@ -268,17 +286,25 @@ collaborators: []
 
   #people-page .person-media { 
     text-align: center; 
-    margin-bottom: 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    min-height: 180px;
   }
   #people-page .person-media img { 
-    max-height: 140px; 
-    width: auto; 
     max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
-    display: inline-block;
-    border-radius: 6px;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+    padding: 1rem;
   }
   #people-page .person-header { 
     text-align: center;
@@ -334,4 +360,38 @@ collaborators: []
   #people-page .collaborators { margin: 0; padding-left: 1.1rem; }
 </style>
 
-<script></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Make cards clickable
+    const cards = document.querySelectorAll('.person-card');
+    
+    cards.forEach(card => {
+      // Find the 'See more' button within this card
+      const seeMoreBtn = card.querySelector('.btn:not(.btn-secondary)');
+      
+      // If there's a 'See more' button, make the card clickable
+      if (seeMoreBtn && seeMoreBtn.href) {
+        card.style.cursor = 'pointer';
+        
+        card.addEventListener('click', function(e) {
+          // Don't trigger if clicking on links or buttons inside the card
+          if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a, button')) {
+            return;
+          }
+          window.location.href = seeMoreBtn.href;
+        });
+        
+        // Add hover effect to indicate clickability
+        card.addEventListener('mouseenter', function() {
+          this.style.boxShadow = '0 6px 18px var(--global-shadow-hover, rgba(0,0,0,.1))';
+          this.style.borderColor = 'var(--global-theme-color, #4f46e5)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.boxShadow = '0 2px 10px var(--global-shadow-color, rgba(0,0,0,.04))';
+          this.style.borderColor = 'var(--global-divider-color, rgba(0,0,0,.08))';
+        });
+      }
+    });
+  });
+</script>
