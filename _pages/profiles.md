@@ -263,14 +263,14 @@ collaborators: []
     background: var(--global-card-bg-color, #fff);
     color: var(--global-text-color, #000);
     box-shadow: 0 2px 10px var(--global-shadow-color, rgba(0,0,0,.04));
-    padding: 1.5rem;
+    padding: 0;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
     display: flex;
     flex-direction: column;
-    height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
   }
   #people-page .person-card:hover { 
     transform: translateY(-5px); 
@@ -285,45 +285,35 @@ collaborators: []
   }
 
   #people-page .person-media { 
-    text-align: center; 
-    margin: -1.5rem -1.5rem 1rem -1.5rem;
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     background: #f8f9fa;
-    min-height: 180px;
+    padding: 1.5rem;
+    margin: 0;
+    flex-shrink: 0;
   }
   #people-page .person-media img { 
     max-width: 100%;
-    max-height: 100%;
+    max-height: 200px;
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 0;
+    border-radius: 4px;
     transition: transform 0.3s ease;
-    padding: 1rem;
+    margin: 0 auto;
+    display: block;
   }
   #people-page .person-header { 
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 0;
+    padding: 1rem 1.5rem;
     flex-grow: 1;
-  }
-  #people-page .person-name { 
-    margin: 0; 
-    font-size: 1.1rem;
-    color: var(--global-theme-color, #4f46e5);
-    font-weight: 600;
-  }
-  #people-page .person-meta { 
     margin: 0.25rem 0 0; 
     color: var(--global-text-muted, #6c757d); 
     font-size: 0.9rem; 
   }
   #people-page .person-header .actions { 
-    margin-top: 1rem; 
+    margin-top: auto;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -362,34 +352,20 @@ collaborators: []
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Make cards clickable
     const cards = document.querySelectorAll('.person-card');
     
     cards.forEach(card => {
-      // Find the 'See more' button within this card
-      const seeMoreBtn = card.querySelector('.btn:not(.btn-secondary)');
+      const seeMoreBtn = card.querySelector('a.btn:not(.btn-secondary)');
       
-      // If there's a 'See more' button, make the card clickable
       if (seeMoreBtn && seeMoreBtn.href) {
         card.style.cursor = 'pointer';
         
         card.addEventListener('click', function(e) {
           // Don't trigger if clicking on links or buttons inside the card
-          if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a, button')) {
+          if (e.target.closest('a, button')) {
             return;
           }
           window.location.href = seeMoreBtn.href;
-        });
-        
-        // Add hover effect to indicate clickability
-        card.addEventListener('mouseenter', function() {
-          this.style.boxShadow = '0 6px 18px var(--global-shadow-hover, rgba(0,0,0,.1))';
-          this.style.borderColor = 'var(--global-theme-color, #4f46e5)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-          this.style.boxShadow = '0 2px 10px var(--global-shadow-color, rgba(0,0,0,.04))';
-          this.style.borderColor = 'var(--global-divider-color, rgba(0,0,0,.08))';
         });
       }
     });
