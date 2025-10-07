@@ -220,32 +220,115 @@ collaborators: []
 
 <style>
   #people-page .people-section { margin-bottom: 2rem; }
-  #people-page .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  @media (max-width: 992px) { #people-page .grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 576px) { #people-page .grid { grid-template-columns: 1fr; } }
+  #people-page .grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  @media (max-width: 992px) { 
+    #people-page .grid { 
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    } 
+  }
+  @media (max-width: 576px) { 
+    #people-page .grid { 
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    #people-page .person-card {
+      padding: 1rem;
+    }
+  }
 
   #people-page .person-card {
-    border: 1px solid rgba(0,0,0,.08);
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,.08));
     border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,.04);
-    padding: .8rem;
+    background: var(--global-card-bg-color, #fff);
+    color: var(--global-text-color, #000);
+    box-shadow: 0 2px 10px var(--global-shadow-color, rgba(0,0,0,.04));
+    padding: 1.25rem;
     cursor: pointer;
-    transition: transform .2s ease, box-shadow .2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
-  #people-page .person-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
-  #people-page .person-card:focus { box-shadow: 0 0 0 3px rgba(79,70,229,.25); }
+  #people-page .person-card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 18px var(--global-shadow-hover, rgba(0,0,0,.1));
+    border-color: var(--global-theme-color, #4f46e5);
+  }
+  #people-page .person-card:focus { 
+    box-shadow: 0 0 0 3px var(--global-theme-color, rgba(79,70,229,.25)); 
+  }
 
-  #people-page .person-media { text-align: center; margin-bottom: .6rem; }
-  #people-page .person-media img { max-height: 140px; width: auto; display: inline-block; }
-  #people-page .person-header { text-align: center; }
-  #people-page .person-name { margin: 0; font-size: 1.05rem; }
-  #people-page .person-meta { margin: .2rem 0 0; color: #555; font-size: .9rem; }
-  #people-page .person-header .actions { margin-top: .5rem; display: inline-flex; gap: .4rem; }
-  #people-page .person-details { display: none; margin-top: .6rem; }
-  #people-page .links { display: flex; gap: .4rem; flex-wrap: wrap; }
-  #people-page .btn.btn-sm { padding: .35rem .6rem; font-size: .85rem; border-radius: 8px; background: var(--accent, #4f46e5); color: #fff; text-decoration: none; }
+  #people-page .person-media { 
+    text-align: center; 
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+  #people-page .person-media img { 
+    max-height: 140px; 
+    width: auto; 
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  #people-page .person-header { 
+    text-align: center;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+  #people-page .person-name { 
+    margin: 0; 
+    font-size: 1.1rem;
+    color: var(--global-theme-color, #4f46e5);
+    font-weight: 600;
+  }
+  #people-page .person-meta { 
+    margin: 0.25rem 0 0; 
+    color: var(--global-text-muted, #6c757d); 
+    font-size: 0.9rem; 
+  }
+  #people-page .person-header .actions { 
+    margin-top: 1rem; 
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  #people-page .person-details { 
+    display: none; 
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--global-divider-color, rgba(0,0,0,.08));
+  }
+  #people-page .links { 
+    display: flex; 
+    gap: 0.5rem; 
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #people-page .btn.btn-sm { 
+    padding: 0.4rem 0.8rem; 
+    font-size: 0.85rem; 
+    border-radius: 6px; 
+    background-color: var(--global-theme-color, #4f46e5);
+    color: var(--global-hover-text-color, #fff);
+    text-decoration: none;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  #people-page .btn.btn-sm:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
   #people-page .see-more-btn { margin-top: .5rem; padding: .35rem .6rem; font-size: .85rem; border-radius: 8px; border: 1px solid rgba(0,0,0,.1); background: #f7f7f7; cursor: pointer; }
 
   #people-page .collaborators { margin: 0; padding-left: 1.1rem; }

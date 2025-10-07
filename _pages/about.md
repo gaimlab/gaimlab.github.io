@@ -28,28 +28,28 @@ latest_posts:
 <div id="about-gaim">
   <p>Welcome to the <strong>Generative AI Models Lab</strong> at Sharif University of Technology. Our research focuses on advancing the field of artificial intelligence through cutting-edge research in the following key areas:</p>
 
-  <div class="pillbar" role="tablist" aria-label="Research areas">
-    <span class="pill" role="tab" tabindex="0" data-target="#area-vfgaim" aria-controls="area-vfgaim" aria-selected="false">Vector Field Generative AI</span>
-    <span class="pill" role="tab" tabindex="0" data-target="#area-trustworthy-ml" aria-controls="area-trustworthy-ml" aria-selected="false">Trustworthy ML</span>
-    <span class="pill" role="tab" tabindex="0" data-target="#area-rl" aria-controls="area-rl" aria-selected="false">Reinforcement Learning</span>
+  <div class="pillbar" role="navigation" aria-label="Research areas">
+    <a href="/projects/Vector-Field-Generative-AI-Models/" class="pill">Vector Field Generative AI</a>
+    <a href="/projects/Trustworthy-Machine-Learning/" class="pill">Trustworthy ML</a>
+    <a href="/projects/Reinforcement-Learning/" class="pill">Reinforcement Learning</a>
   </div>
 
 
   <div class="grid">
-    <section class="card" id="area-vfgaim" aria-labelledby="pill-vfgaim">
-      <h3 class="card-title">Vector Field Generative AI</h3>
+    <section class="card" id="area-vfgaim" aria-labelledby="pill-vfgaim" style="background-color: var(--global-card-bg-color); color: var(--global-text-color); border: 1px solid var(--global-divider-color);">
+      <h3 class="card-title" style="color: var(--global-theme-color);">Vector Field Generative AI</h3>
       <ul>
         <li>Continuous-time generative modeling</li>
         <li>Flow-based models and normalizing flows</li>
         <li>Differential equation-based generative models</li>
       </ul>
       <div class="card-actions">
-        <a class="btn" href="/research/#vfgaim">See related research</a>
+        <a class="btn" href="/research/#vfgaim" style="background-color: var(--global-theme-color); color: var(--global-hover-text-color);">See related research</a>
       </div>
     </section>
 
-    <section class="card" id="area-trustworthy-ml" aria-labelledby="pill-trustworthy-ml">
-      <h3 class="card-title">Trustworthy Machine Learning</h3>
+    <section class="card" id="area-trustworthy-ml" aria-labelledby="pill-trustworthy-ml" style="background-color: var(--global-card-bg-color); color: var(--global-text-color); border: 1px solid var(--global-divider-color);">
+      <h3 class="card-title" style="color: var(--global-theme-color);">Trustworthy Machine Learning</h3>
       <ul>
         <li>Robustness and adversarial robustness</li>
         <li>Explainability and interpretability</li>
@@ -57,12 +57,12 @@ latest_posts:
         <li>Privacy-preserving machine learning</li>
       </ul>
       <div class="card-actions">
-        <a class="btn" href="/research/#trustworthy-ml">See related research</a>
+        <a class="btn" href="/research/#trustworthy-ml" style="background-color: var(--global-theme-color); color: var(--global-hover-text-color);">See related research</a>
       </div>
     </section>
 
-    <section class="card" id="area-rl" aria-labelledby="pill-rl">
-      <h3 class="card-title">Reinforcement Learning</h3>
+    <section class="card" id="area-rl" aria-labelledby="pill-rl" style="background-color: var(--global-card-bg-color); color: var(--global-text-color); border: 1px solid var(--global-divider-color);">
+      <h3 class="card-title" style="color: var(--global-theme-color);">Reinforcement Learning</h3>
       <ul>
         <li>Model-based reinforcement learning</li>
         <li>Multi-agent systems</li>
@@ -70,7 +70,7 @@ latest_posts:
         <li>Applications in real-world decision making</li>
       </ul>
       <div class="card-actions">
-        <a class="btn" href="/research/#rl">See related research</a>
+        <a class="btn" href="/research/#rl" style="background-color: var(--global-theme-color); color: var(--global-hover-text-color);">See related research</a>
       </div>
     </section>
   </div>
@@ -106,15 +106,22 @@ latest_posts:
     padding: .35rem .6rem;
     border-radius: 999px;
     font-size: .9rem;
-    white-space: nowrap; /* keep to one line */
+    white-space: nowrap;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    cursor: pointer;
-    user-select: none;
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
-  #about-gaim .pill:focus { outline: 2px solid var(--accent, #4f46e5); outline-offset: 2px; }
-  #about-gaim .pill.active { background: var(--accent, #4f46e5); color: #fff; border-color: transparent; }
+  #about-gaim .pill:hover {
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+    transform: translateY(-1px);
+  }
+  #about-gaim .pill:focus { 
+    outline: 2px solid var(--accent, #4f46e5); 
+    outline-offset: 2px; 
+  }
 
   #about-gaim .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   #about-gaim .grid.single { grid-template-columns: 1fr; }
@@ -176,63 +183,3 @@ latest_posts:
   #about-gaim .btn:hover { filter: brightness(.95); }
   #about-gaim .btn.btn-secondary { background: #fff; color: inherit; }
 </style>
-
-<script>
-  (function() {
-    var root = document.getElementById('about-gaim');
-    if (!root) return;
-
-    var pills = Array.prototype.slice.call(root.querySelectorAll('.pillbar .pill'));
-    var cards = Array.prototype.slice.call(root.querySelectorAll('.grid .card'));
-
-    function hideAll() {
-      cards.forEach(function(card) {
-        card.classList.remove('show');
-        card.setAttribute('aria-hidden', 'true');
-      });
-      var grid = root.querySelector('.grid');
-      if (grid) grid.classList.remove('single');
-    }
-
-    function clearActive() {
-      pills.forEach(function(p) { p.classList.remove('active'); p.setAttribute('aria-selected', 'false'); });
-    }
-
-    function handleActivate(pill) {
-      var target = pill.getAttribute('data-target');
-      var isActive = pill.classList.contains('active');
-      var grid = root.querySelector('.grid');
-      if (isActive) {
-        clearActive();
-        hideAll();
-        return;
-      }
-      clearActive();
-      hideAll();
-      pill.classList.add('active');
-      pill.setAttribute('aria-selected', 'true');
-      var targetEl = root.querySelector(target);
-      if (targetEl) {
-        targetEl.classList.add('show');
-        targetEl.setAttribute('aria-hidden', 'false');
-        if (grid) grid.classList.add('single');
-        if (grid && grid.scrollIntoView) {
-          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-    }
-
-    // Initial state: everything hidden
-    hideAll();
-
-    pills.forEach(function(pill) {
-      pill.addEventListener('click', function() { handleActivate(pill); });
-      pill.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          handleActivate(pill);
-        }
-      });
-    });
-  })();
-</script>
