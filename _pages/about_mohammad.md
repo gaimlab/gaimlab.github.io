@@ -42,9 +42,18 @@ nav: false
       <div class="panel">
         <h3 class="panel-title">Education</h3>
         <ul class="timeline">
-          <li><strong>PhD in Electrical Engineering -  Communication Systems</strong>, Sharif University of Technology, Present</li>
-          <li><strong>MSc in Electrical Engineering - Communication Systems</strong>, Sharif University of Technology, 2023-2025</li>
-          <li><strong>BSc in Electrical Engineering - Communication Systems</strong>, Sharif University of Technology, 2019-2023</li>
+          <li>
+            <strong>PhD in Electrical Engineering - Communication Systems</strong>
+            <p>Sharif University of Technology<br>2023 - Present</p>
+          </li>
+          <li>
+            <strong>MSc in Electrical Engineering - Communication Systems</strong>
+            <p>Sharif University of Technology<br>2021 - 2023</p>
+          </li>
+          <li>
+            <strong>BSc in Electrical Engineering - Communication Systems</strong>
+            <p>Sharif University of Technology<br>2017 - 2021</p>
+          </li>
         </ul>
       </div>
 
@@ -56,42 +65,252 @@ nav: false
       <div class="panel">
         <h3 class="panel-title">Achievements</h3>
         <ul class="bullets">
-          <li>🥇 Gold Medal, Iranian Physics Olympiad, 2018</li>
+          <li><strong>🥇 Gold Medal</strong>, Iranian Physics Olympiad, 2018</li>
         </ul>
       </div>
-    </article>
-  </section>
-</div>
 
 <style>
   /* Scoped styles for the individual profile page */
-  #profile-page { margin-top: 1rem; }
-  #profile-page .profile-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
-  #profile-page .profile-title h1 { margin: 0; }
-  #profile-page .profile-title .subtitle { margin: .25rem 0 0; color: #555; }
-  #profile-page .profile-photo img { max-height: 160px; width: auto; display: block; }
-  @media (max-width: 576px) { #profile-page .profile-header { flex-direction: column-reverse; align-items: flex-start; } #profile-page .profile-photo img { max-height: 120px; } }
+  #profile-page { 
+    margin-top: 1.5rem;
+    color: var(--global-text-color, #333);
+    background: var(--global-bg-color, #f8f9fa);
+  }
+  
+  #profile-page .profile-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 2rem; 
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--global-card-bg-color, #fff);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--global-shadow-color, rgba(0,0,0,.05));
+  }
+  
+  #profile-page .profile-title h1 { 
+    margin: 0; 
+    color: var(--global-theme-color, #4f46e5);
+  }
+  
+  #profile-page .profile-title .subtitle { 
+    margin: 0.5rem 0 0; 
+    color: var(--global-text-muted, #6c757d);
+    font-size: 1.1rem;
+  }
+  
+  #profile-page .profile-photo img { 
+    max-height: 180px; 
+    width: auto; 
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,.08));
+    box-shadow: 0 2px 8px var(--global-shadow-color, rgba(0,0,0,.05));
+  }
+  
+  @media (max-width: 768px) { 
+    #profile-page .profile-header { 
+      flex-direction: column-reverse; 
+      align-items: flex-start; 
+      gap: 1.5rem;
+    } 
+    #profile-page .profile-photo img { 
+      max-height: 140px; 
+    } 
+  }
 
-  #profile-page .profile-grid { display: grid; grid-template-columns: 280px 1fr; gap: 1rem; }
-  @media (max-width: 992px) { #profile-page .profile-grid { grid-template-columns: 1fr; } }
+  #profile-page .profile-grid { 
+    display: grid; 
+    grid-template-columns: 300px 1fr; 
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 992px) { 
+    #profile-page .profile-grid { 
+      grid-template-columns: 1fr; 
+    } 
+  }
 
-  #profile-page .panel { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-  #profile-page .panel-title { margin: 0 0 .6rem; font-size: 1rem; letter-spacing: .2px; }
-  #profile-page .profile-main .panel { margin-bottom: 1.25rem; }
-  #profile-page .profile-aside .panel { margin-bottom: 1.25rem; }
+  #profile-page .panel { 
+    background: var(--global-card-bg-color, #fff); 
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,.08)); 
+    border-radius: 12px; 
+    padding: 1.5rem; 
+    box-shadow: 0 2px 12px var(--global-shadow-color, rgba(0,0,0,.04));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  #profile-page .panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px var(--global-shadow-hover, rgba(0,0,0,.08));
+  }
+  
+  #profile-page .panel-title { 
+    margin: 0 0 1rem; 
+    font-size: 1.2rem; 
+    color: var(--global-theme-color, #4f46e5);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--global-divider-color, rgba(0,0,0,.08));
+  }
+  
+  #profile-page .panel + .panel { 
+    margin-top: 1.5rem; 
+  }
 
-  #profile-page .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
-  #profile-page .tags li { background: rgba(0,0,0,.05); border: 1px solid rgba(0,0,0,.08); border-radius: 999px; padding: .3rem .6rem; font-size: .9rem; white-space: nowrap; }
+  #profile-page .tags { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.5rem; 
+  }
+  
+  #profile-page .tags li { 
+    background: var(--global-bg-color, #f8f9fa); 
+    padding: 0.4rem 0.8rem; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    color: var(--global-text-color, #333);
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,.08));
+  }
 
-  /* Enhanced timeline */
-  #profile-page .timeline { position: relative; margin: 0; padding-left: 1rem; list-style: none; }
-  #profile-page .timeline:before { content: ""; position: absolute; top: .25rem; bottom: .25rem; left: .25rem; width: 2px; background: linear-gradient(180deg, var(--accent, #4f46e5), rgba(79,70,229,.25)); border-radius: 1px; }
-  #profile-page .timeline li { margin: .5rem 0; padding-left: .5rem; font-size: .95rem; border: 0 !important; position: relative; }
-  #profile-page .timeline li::before { content: none !important; border: 0 !important; }
-  #profile-page .timeline li::marker { content: '' !important; }
-  #profile-page .bullets { margin: 0; padding-left: 1.1rem; font-size: .95rem; }
+  #profile-page .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
 
-  #profile-page .links { display: flex; gap: .4rem; flex-wrap: wrap; }
-  #profile-page .btn.btn-sm { padding: .35rem .6rem; font-size: .85rem; border-radius: 8px; background: var(--accent, #4f46e5); color: #fff; text-decoration: none; border: 1px solid rgba(0,0,0,.06); }
-  #profile-page .btn.btn-sm.btn-secondary { background: #fff; color: inherit; }
+  #profile-page .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.1rem;
+    width: 2px;
+    background: var(--global-theme-color, #4f46e5);
+    opacity: 0.2;
+    z-index: 1;
+  }
+
+  #profile-page .timeline li {
+    position: relative;
+    padding: 0 0 1.5rem 2.5rem;
+    margin: 0;
+  }
+
+  #profile-page .timeline li:last-child {
+    padding-bottom: 0.5rem;
+  }
+
+  #profile-page .timeline li:before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--global-card-bg-color, #fff);
+    border: 2px solid var(--global-theme-color, #4f46e5);
+    z-index: 2;
+  }
+
+  #profile-page .timeline li:after {
+    content: '';
+    position: absolute;
+    left: 0.9rem;
+    top: 0.65rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--global-theme-color, #4f46e5);
+    z-index: 3;
+  }
+
+  #profile-page .timeline li strong {
+    display: block;
+    color: var(--global-theme-color, #4f46e5);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+
+  #profile-page .timeline li p {
+    margin: 0.25rem 0 0;
+    color: var(--global-text-muted, #6c757d);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  #profile-page .bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #profile-page .bullets li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    color: var(--global-text-color, #333);
+  }
+
+  #profile-page .bullets li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--global-theme-color, #4f46e5);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  #profile-page .links { 
+    display: flex; 
+    gap: 0.75rem; 
+    margin-top: 1rem; 
+    flex-wrap: wrap;
+  }
+  
+  #profile-page .btn { 
+    padding: 0.5rem 1rem; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  #profile-page .btn-sm { 
+    padding: 0.4rem 0.8rem; 
+    font-size: 0.85rem; 
+  }
+  
+  #profile-page .btn { 
+    background: var(--global-theme-color, #4f46e5); 
+    color: var(--global-hover-text-color, #fff); 
+    border: none; 
+  }
+  
+  #profile-page .btn-secondary { 
+    background: var(--global-bg-color, #f8f9fa); 
+    color: var(--global-text-color, #333); 
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,.1));
+  }
+  
+  #profile-page .btn:hover { 
+    opacity: 0.9; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px var(--global-shadow-hover, rgba(0,0,0,.1));
+  }
+  
+  /* Smooth transitions for theme changes */
+  #profile-page,
+  #profile-page * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
 </style>
