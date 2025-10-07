@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
+        },{id: "nav-research",
+          title: "research",
+          description: "Research areas and related works.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/research/";
           },
         },{id: "nav-teaching",
           title: "teaching",
@@ -39,28 +39,12 @@ ninja.data = [{
           },
         },{id: "nav-people",
           title: "people",
-          description: "Meet our distinguished researchers and team members driving innovation in AI and machine learning.",
+          description: "Our team, categorized by role. Click a card to see details.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "projects-reinforcement-learning",
+        },{id: "projects-reinforcement-learning",
           title: 'Reinforcement Learning',
           description: "Projects on Reinforcement Learning",
           section: "Projects",handler: () => {
