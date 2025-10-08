@@ -278,14 +278,81 @@ website: "https://generative-ai-sut.github.io/"
   }
   @media (max-width: 576px) { #course-page .course-hero { flex-direction: column-reverse; align-items: flex-start; } #course-page .course-hero .hero-media img { max-height: 110px; } }
 
-  #course-page .course-intro .meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .5rem; margin-top: .5rem; }
-  @media (max-width: 768px) { #course-page .course-intro .meta-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-  #course-page .meta-item { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 10px; padding: .6rem .75rem; box-shadow: 0 2px 8px rgba(0,0,0,.03); }
-  #course-page .meta-item .label { display: block; font-size: .8rem; color: #666; }
-  #course-page .meta-item .value { font-weight: 600; }
+  /* Course intro meta grid */
+  #course-page .course-intro .meta-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, minmax(0,1fr)); 
+    gap: .5rem; 
+    margin-top: .5rem; 
+  }
+  @media (max-width: 768px) { 
+    #course-page .course-intro .meta-grid { 
+      grid-template-columns: repeat(2, minmax(0,1fr)); 
+    } 
+  }
+  #course-page .meta-item { 
+    background: var(--global-card-bg-color); 
+    border: 1px solid var(--global-divider-color); 
+    border-radius: 10px; 
+    padding: .6rem .75rem; 
+    box-shadow: 0 2px 8px var(--global-divider-color);
+  }
+  #course-page .meta-item .label { 
+    display: block; 
+    font-size: .8rem; 
+    color: var(--global-text-color-light); 
+  }
+  #course-page .meta-item .value { 
+    font-weight: 600; 
+    color: var(--global-text-color);
+  }
 
-  #course-page .pill-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 .75rem; }
-  #course-page .pill-list span { background: rgba(0,0,0,.05); border: 1px solid rgba(0,0,0,.08); border-radius: 999px; padding: .3rem .6rem; font-size: .9rem; white-space: nowrap; }
+  /* Pill list styles */
+  #course-page .pill-list { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: .4rem; 
+    margin: .5rem 0 .75rem; 
+  }
+  #course-page .pill-list span { 
+    background: var(--global-code-bg-color); 
+    border: 1px solid var(--global-divider-color); 
+    border-radius: 999px; 
+    padding: .3rem .6rem; 
+    font-size: .9rem; 
+    white-space: nowrap;
+    color: var(--global-text-color);
+  }
+  
+  /* Table styles for dark mode */
+  #course-page .grading table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  #course-page .grading th,
+  #course-page .grading td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+  }
+  #course-page .grading th {
+    color: var(--global-text-color-light);
+    font-weight: 600;
+    border-bottom: 2px solid var(--global-theme-color);
+  }
+  #course-page .grading tr:hover {
+    background-color: var(--global-code-bg-color);
+  }
+  
+  /* Ensure text colors in info cards */
+  #course-page .info-card {
+    color: var(--global-text-color);
+  }
+  #course-page .info-card .value {
+    color: var(--global-theme-color);
+  }
 
   #course-page .section { margin-top: .75rem; }
   #course-page .section-title { margin: 0 0 .4rem; font-size: 1.2rem; }
@@ -300,15 +367,58 @@ website: "https://generative-ai-sut.github.io/"
   #course-page .checklist li { position: relative; padding-left: 1.2rem; }
   #course-page .checklist li:before { content: "✔"; position: absolute; left: 0; top: 0; color: var(--accent, #4f46e5); font-weight: 700; }
 
-  #course-page .topics { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .35rem .75rem; margin: .25rem 0 .75rem; }
-  @media (max-width: 576px) { #course-page .topics { grid-template-columns: 1fr; } }
-  #course-page .topics li { list-style: none; position: relative; padding-left: .9rem; }
-  #course-page .topics li:before { content: ""; position: absolute; left: 0; top: .55rem; width: .45rem; height: .45rem; border-radius: 50%; background: var(--accent, #4f46e5); box-shadow: 0 0 0 3px rgba(79,70,229,.12); }
+  #course-page .topics { 
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0,1fr)); 
+    gap: .35rem .75rem; 
+    margin: .25rem 0 .75rem; 
+  }
+  @media (max-width: 576px) { 
+    #course-page .topics { 
+      grid-template-columns: 1fr; 
+    } 
+  }
+  #course-page .topics li { 
+    list-style: none; 
+    position: relative; 
+    padding-left: .9rem; 
+  }
+  #course-page .topics li:before { 
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: .55rem; 
+    width: .45rem; 
+    height: .45rem; 
+    border-radius: 50%; 
+    background: var(--global-theme-color); 
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--global-theme-color) 12%, transparent);
+  }
 
-  #course-page .grading table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-  #course-page .grading th, #course-page .grading td { padding: .6rem .75rem; text-align: left; }
-  #course-page .grading thead { background: rgba(79,70,229,.08); }
-  #course-page .grading tbody tr + tr td { border-top: 1px solid rgba(0,0,0,.06); }
+  #course-page .grading table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: var(--global-card-bg-color); 
+    border: 1px solid var(--global-divider-color); 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 10px var(--global-divider-color); 
+  }
+  #course-page .grading th, 
+  #course-page .grading td { 
+    padding: .6rem .75rem; 
+    text-align: left; 
+    color: var(--global-text-color);
+  }
+  #course-page .grading thead { 
+    background: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+  }
+  #course-page .grading tbody tr + tr td { 
+    border-top: 1px solid var(--global-divider-color); 
+  }
+  #course-page .grading tbody tr:hover {
+    background-color: color-mix(in srgb, var(--global-theme-color) 4%, transparent);
+  }
 
   #course-page .resources { border: 1px solid rgba(0,0,0,.06); border-radius: 12px; background: linear-gradient(180deg, rgba(79,70,229,.08), rgba(79,70,229,.03)); padding: .8rem .9rem; margin-top: .75rem; }
   #course-page .btn { display: inline-block; padding: .45rem .75rem; border-radius: 10px; background: var(--accent, #4f46e5); color: #fff; text-decoration: none; border: 1px solid rgba(0,0,0,.06); }
