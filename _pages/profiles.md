@@ -286,7 +286,7 @@ collaborators: []
 
   #people-page .person-media { 
     text-align: center;
-    background: #f8f9fa;
+    background: var(--global-card-bg-color, #f8f9fa);
     padding: 2rem 1.5rem 1.5rem;
     margin: 0;
     flex-shrink: 0;
@@ -294,16 +294,39 @@ collaborators: []
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 12px 12px 0 0;
   }
   #people-page .person-media img { 
     max-width: 100%;
     max-height: 180px;
     width: auto;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 4px;
     transition: transform 0.3s ease;
     display: block;
+    transform: none;
+    image-orientation: from-image;
+    background: transparent;
+  }
+  
+  /* Fix for rotated images - handle EXIF orientation */
+  #people-page .person-media img {
+    image-orientation: from-image;
+    -webkit-image-orientation: from-image;
+    transform: none !important;
+  }
+  
+  /* Override any inline transform styles that might cause rotation */
+  #people-page .person-media img[style*="transform"] {
+    transform: none !important;
+  }
+  
+  /* Dark mode compatibility */
+  @media (prefers-color-scheme: dark) {
+    #people-page .person-media {
+      background: var(--global-card-bg-color, #2d3748);
+    }
   }
   #people-page .person-header { 
     text-align: center;

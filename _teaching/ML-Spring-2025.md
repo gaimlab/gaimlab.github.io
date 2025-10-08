@@ -8,6 +8,7 @@ venue: "Sharif University of Technology"
 semester: "Spring 2025"
 description: "An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications."
 date: 2025-01-01
+website: "https://ml-sut-amini.github.io"
 location: "Tehran, Iran"
 img: assets/img/IML.png
 category: "Undergraduate"
@@ -15,7 +16,8 @@ category: "Undergraduate"
 
 <div id="course-page">
   <section class="course-intro">
-    <p>An introductory course covering fundamental machine learning algorithms including classification, regression, decision trees, and clustering, with hands-on implementation and applications.</p>
+    <p>This course offers a thorough introduction to Machine Learning, encompassing both foundational theories and practical applications. Students will delve into problem formulation in Machine Learning, engaging with various types of learning scenarios, including Supervised, Unsupervised, and Reinforcement Learning, while also gaining insights into training and optimization techniques.</p>
+    <p>The curriculum provides in-depth coverage of probability and statistics, featuring around 11 sections dedicated to these essential topics. Through interactive projects and assignments, students will acquire hands-on experience in implementing diverse machine learning algorithms, while also deepening their understanding of the underlying theoretical principles.</p>
     <div class="meta-grid">
       <div class="meta-item"><span class="label">Semester</span><span class="value">{{ page.semester }}</span></div>
       <div class="meta-item"><span class="label">Credits</span><span class="value">3</span></div>
@@ -50,14 +52,15 @@ category: "Undergraduate"
       <li>Introduction</li>
       <li>Probability (Univariate, Multivariate)</li>
       <li>Statistics</li>
-      <li>Decision Theory</li>
+      <li>Linear Algebra</li>
       <li>Optimization</li>
-      <li>Linear/Logistic Regression</li>
+      <li>Logistic Regression</li>
+      <li>Discriminant Analysis</li>
+      <li>Linear Regression</li>
       <li>Neural Networks</li>
-      <li>Exemplar-Based and Kernel Methods</li>
-      <li>Trees, Bagging, Forest, Boosting</li>
-      <li>Dimensionality Reduction</li>
-      <li>Clustering</li>
+      <li>Kernel Methods</li>
+      <li>Decision Trees & Dimensionality Reduction</li>
+      <li>Reinforcement Learning</li>
     </ul>
   </section>
 
@@ -67,10 +70,10 @@ category: "Undergraduate"
       <table>
         <thead><tr><th>Component</th><th>Weight</th></tr></thead>
         <tbody>
-          <tr><td>Assignments</td><td>30%</td></tr>
+          <tr><td>Homework</td><td>30%</td></tr>
           <tr><td>Midterm Exam</td><td>20%</td></tr>
-          <tr><td>Final Project</td><td>30%</td></tr>
-          <tr><td>Final Exam</td><td>20%</td></tr>
+          <tr><td>Project</td><td>20%</td></tr>
+          <tr><td>Final Exam</td><td>30%</td></tr>
           <tr><td>Participation</td><td>5%</td></tr>
         </tbody>
       </table>
@@ -102,6 +105,11 @@ category: "Undergraduate"
   #course-page .info-card { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 10px; padding: .6rem .75rem; box-shadow: 0 2px 8px rgba(0,0,0,.03); }
   #course-page .info-card .label { display: block; font-size: .8rem; color: #666; }
   #course-page .info-card .value { font-weight: 600; }
+
+  #course-page .checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .35rem .75rem; }
+  @media (max-width: 576px) { #course-page .checklist { grid-template-columns: 1fr; } }
+  #course-page .checklist li { position: relative; padding-left: 1.2rem; }
+  #course-page .checklist li:before { content: "✔"; position: absolute; left: 0; top: 0; color: var(--accent, #4f46e5); font-weight: 700; }
 
   #course-page .pill-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 .75rem; }
   #course-page .pill-list span { background: rgba(0,0,0,.05); border: 1px solid rgba(0,0,0,.08); border-radius: 999px; padding: .3rem .6rem; font-size: .9rem; white-space: nowrap; }

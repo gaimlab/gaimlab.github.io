@@ -103,6 +103,11 @@ category: "Undergraduate"
   #course-page .info-card .label { display: block; font-size: .8rem; color: #666; }
   #course-page .info-card .value { font-weight: 600; }
 
+  #course-page .checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .35rem .75rem; }
+  @media (max-width: 576px) { #course-page .checklist { grid-template-columns: 1fr; } }
+  #course-page .checklist li { position: relative; padding-left: 1.2rem; }
+  #course-page .checklist li:before { content: "✔"; position: absolute; left: 0; top: 0; color: var(--accent, #4f46e5); font-weight: 700; }
+
   #course-page .pill-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 .75rem; }
   #course-page .pill-list span { background: rgba(0,0,0,.05); border: 1px solid rgba(0,0,0,.08); border-radius: 999px; padding: .3rem .6rem; font-size: .9rem; white-space: nowrap; }
 

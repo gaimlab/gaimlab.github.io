@@ -120,7 +120,7 @@ website: "https://generative-ai-sut.github.io/"
   #course-page .course-hero .hero-media img { max-height: 140px; width: auto; display: block; }
   @media (max-width: 576px) { #course-page .course-hero { flex-direction: column-reverse; align-items: flex-start; } #course-page .course-hero .hero-media img { max-height: 110px; } }
 
-  #course-page .course-intro .meta-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .5rem; margin-top: .5rem; }
+  #course-page .course-intro .meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .5rem; margin-top: .5rem; }
   @media (max-width: 768px) { #course-page .course-intro .meta-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
   #course-page .meta-item { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 10px; padding: .6rem .75rem; box-shadow: 0 2px 8px rgba(0,0,0,.03); }
   #course-page .meta-item .label { display: block; font-size: .8rem; color: #666; }
