@@ -55,10 +55,10 @@ bsc:
     links:
       - label: Email
         url: mailto:amir8afzali@gmail.com
-collaborators:
-  - name: Mohammad Parsa Dini
-    university: Sharif University of Technology
-    department: Electrical Engineering
+collaborators: []
+  # - name: Mohammad Parsa Dini
+  #   university: Sharif University of Technology
+  #   department: Electrical Engineering
 ---
 <div id="people-page">
   {% if page.faculty and page.faculty.size > 0 %}
