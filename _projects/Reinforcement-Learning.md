@@ -58,11 +58,11 @@ Key areas of investigation include:
     <h3 class="people-title">BSc Students</h3>
     <ul class="people-list">
       <li class="person">
-        <i class="fas fa-handshake person-icon"></i>
+        <i class="fas fa-user-graduate person-icon"></i>
         <span class="person-name">Borna Khodabandeh</span>
       </li>
       <li class="person">
-        <i class="fas fa-handshake person-icon"></i>
+        <i class="fas fa-user-graduate person-icon"></i>
         <span class="person-name">Amir Abbas Afzali</span>
       </li>
     </ul>

@@ -113,11 +113,169 @@ website: "https://generative-ai-sut.github.io/"
 
 <style>
   /* Scoped styles for the course page */
-  #course-page { margin-top: .5rem; }
-  #course-page .course-hero { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
-  #course-page .course-hero .title-wrap h1 { margin: 0; }
-  #course-page .course-hero .subtitle { margin: .25rem 0 0; color: #555; }
-  #course-page .course-hero .hero-media img { max-height: 140px; width: auto; display: block; }
+  #course-page { 
+    margin-top: .5rem;
+    color: var(--global-text-color);
+  }
+  #course-page .course-hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 1rem; 
+    margin-bottom: .75rem; 
+  }
+  #course-page .course-hero .title-wrap h1 { 
+    margin: 0;
+    color: var(--global-text-color);
+  }
+  #course-page .course-hero .subtitle { 
+    margin: .25rem 0 0; 
+    color: var(--global-text-color-light);
+  }
+  #course-page .course-hero .hero-media img { 
+    max-height: 140px; 
+    width: auto; 
+    display: block; 
+  }
+  #course-page .section {
+    background-color: var(--global-card-bg-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px var(--global-divider-color);
+  }
+  #course-page .section-title {
+    color: var(--global-theme-color);
+    margin-top: 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 0.5rem;
+  }
+  #course-page .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  #course-page .meta-item {
+    background-color: var(--global-code-bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+  #course-page .meta-item .label {
+    display: block;
+    font-weight: 600;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.25rem;
+  }
+  #course-page .meta-item .value {
+    color: var(--global-theme-color);
+    font-weight: 500;
+  }
+  #course-page .info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  #course-page .info-card {
+    background-color: var(--global-code-bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  #course-page .info-card .label {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+  #course-page .info-card .value {
+    color: var(--global-text-color);
+    font-weight: 500;
+    margin-top: 0.25rem;
+    display: block;
+  }
+  #course-page .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  #course-page .checklist li {
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    position: relative;
+  }
+  #course-page .checklist li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--global-theme-color);
+  }
+  #course-page .pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  #course-page .pill-list span {
+    background-color: var(--global-code-bg-color);
+    color: var(--global-text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    border: 1px solid var(--global-divider-color);
+  }
+  #course-page .topics {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+  }
+  #course-page .topics li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  #course-page .topics li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--global-theme-color);
+  }
+  #course-page .grading table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  #course-page .grading th,
+  #course-page .grading td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  #course-page .grading th {
+    color: var(--global-text-color-light);
+    font-weight: 600;
+  }
+  #course-page .resources {
+    text-align: center;
+  }
+  #course-page .resources .btn {
+    display: inline-block;
+    background-color: var(--global-theme-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 1rem 0;
+    transition: background-color 0.2s;
+  }
+  #course-page .resources .btn:hover {
+    background-color: var(--global-hover-color);
+  }
+  #course-page .resources .note {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    #course-page .topics {
+      columns: 1;
+    }
+  }
   @media (max-width: 576px) { #course-page .course-hero { flex-direction: column-reverse; align-items: flex-start; } #course-page .course-hero .hero-media img { max-height: 110px; } }
 
   #course-page .course-intro .meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .5rem; margin-top: .5rem; }
