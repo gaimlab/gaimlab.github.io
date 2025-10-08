@@ -55,7 +55,7 @@ Key areas of investigation include:
   </div>
 
   <div class="people-category">
-    <h3 class="people-title">Collaborators</h3>
+    <h3 class="people-title">BSc Students</h3>
     <ul class="people-list">
       <li class="person">
         <i class="fas fa-handshake person-icon"></i>
@@ -63,7 +63,7 @@ Key areas of investigation include:
       </li>
       <li class="person">
         <i class="fas fa-handshake person-icon"></i>
-        <span class="person-name">Amirabbas Afzali</span>
+        <span class="person-name">Amir Abbas Afzali</span>
       </li>
     </ul>
   </div>
