@@ -36,8 +36,29 @@ msc:
     links:
       - label: Email
         url: mailto:momenihamaneh1381@gmail.com
-bsc: []
-collaborators: []
+bsc:
+  - name: Borna Khodabandeh
+    image:
+    university: Sharif University of Technology
+    department: Electrical Engineering
+    bio: BSc student working on robust learning and reinforcement learning algorithms.
+    content:
+    links:
+      - label: Email
+        url: mailto:borna710kh@gmail.com
+  - name: Amir Abbas Afzali
+    image:
+    university: Sharif University of Technology
+    department: Electrical Engineering
+    bio: BSc student focusing on trustworthy machine learning and adversarial robustness.
+    content:
+    links:
+      - label: Email
+        url: mailto:amir8afzali@gmail.com
+collaborators:
+  - name: Mohammad Parsa Dini
+    university: Sharif University of Technology
+    department: Electrical Engineering
 ---
 <div id="people-page">
   {% if page.faculty and page.faculty.size > 0 %}
@@ -219,9 +240,16 @@ collaborators: []
   {% if page.collaborators and page.collaborators.size > 0 %}
   <section class="people-section">
     <h2>Collaborators</h2>
-    <ul class="collaborators">
-      {% for name in page.collaborators %}
-        <li>{{ name }}</li>
+    <ul class="collaborators-list">
+      {% for p in page.collaborators %}
+        <li class="collaborator-item">
+          <strong>{{ p.name }}</strong>{% if p.university %} · {{ p.university }}{% endif %}{% if p.department %} · {{ p.department }}{% endif %}
+          {% if p.links %}
+            {% for l in p.links %}
+              <a href="{{ l.url }}" target="_blank" rel="noopener" class="collaborator-link">{{ l.label }}</a>{% unless forloop.last %} · {% endunless %}
+            {% endfor %}
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </section>
@@ -384,7 +412,40 @@ collaborators: []
   }
   #people-page .see-more-btn { margin-top: .5rem; padding: .35rem .6rem; font-size: .85rem; border-radius: 8px; border: 1px solid rgba(0,0,0,.1); background: #f7f7f7; cursor: pointer; }
 
-  #people-page .collaborators { margin: 0; padding-left: 1.1rem; }
+  /* Collaborators list styling */
+  #people-page .collaborators-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #people-page .collaborator-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--global-divider-color, rgba(0,0,0,.08));
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  #people-page .collaborator-item:last-child {
+    border-bottom: none;
+  }
+  
+  #people-page .collaborator-item strong {
+    color: var(--global-theme-color, #4f46e5);
+    font-weight: 600;
+  }
+  
+  #people-page .collaborator-link {
+    color: var(--global-text-muted, #6c757d);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+  
+  #people-page .collaborator-link:hover {
+    color: var(--global-theme-color, #4f46e5);
+    text-decoration: underline;
+  }
 </style>
 
 <script>
