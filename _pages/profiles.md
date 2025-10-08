@@ -43,40 +43,42 @@ collaborators: []
   {% if page.faculty and page.faculty.size > 0 %}
   <section class="people-section">
     <h2>Faculty</h2>
-    <div class="grid" data-category="faculty">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" data-category="faculty">
       {% for p in page.faculty %}
-      <article class="person-card" tabindex="0">
-        <div class="person-media">
-          {% if p.image %}
-            {% assign img_path = p.image | prepend: 'assets/img/' %}
-            {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
-          {% endif %}
-        </div>
-        <div class="person-header">
-          <h3 class="person-name">{{ p.name }}</h3>
-          <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
-          <div class="actions">
+      <div class="col mb-4">
+        <article class="person-card h-100" tabindex="0">
+          <div class="person-media">
+            {% if p.image %}
+              {% assign img_path = p.image | prepend: 'assets/img/' %}
+              {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
+            {% endif %}
+          </div>
+          <div class="person-header">
+            <h3 class="person-name">{{ p.name }}</h3>
+            <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
+            <div class="actions">
+              {% if p.links %}
+                {% assign email = p.links | where: "label", "Email" | first %}
+                {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
+              {% endif %}
+              {% if p.content %}
+                {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
+                <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="person-details" id="details-faculty-{{ forloop.index }}">
+            {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
             {% if p.links %}
-              {% assign email = p.links | where: "label", "Email" | first %}
-              {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
-            {% endif %}
-            {% if p.content %}
-              {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
-              <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+            <div class="links">
+              {% for l in p.links %}
+                <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+              {% endfor %}
+            </div>
             {% endif %}
           </div>
-        </div>
-        <div class="person-details" id="details-faculty-{{ forloop.index }}">
-          {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
-          {% if p.links %}
-          <div class="links">
-            {% for l in p.links %}
-              <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </article>
+        </article>
+      </div>
       {% endfor %}
     </div>
   </section>
@@ -85,40 +87,42 @@ collaborators: []
   {% if page.phd and page.phd.size > 0 %}
   <section class="people-section">
     <h2>PhD</h2>
-    <div class="grid" data-category="phd">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" data-category="phd">
       {% for p in page.phd %}
-      <article class="person-card" tabindex="0">
-        <div class="person-media">
-          {% if p.image %}
-            {% assign img_path = p.image | prepend: 'assets/img/' %}
-            {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
-          {% endif %}
-        </div>
-        <div class="person-header">
-          <h3 class="person-name">{{ p.name }}</h3>
-          <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
-          <div class="actions">
+      <div class="col mb-4">
+        <article class="person-card h-100" tabindex="0">
+          <div class="person-media">
+            {% if p.image %}
+              {% assign img_path = p.image | prepend: 'assets/img/' %}
+              {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
+            {% endif %}
+          </div>
+          <div class="person-header">
+            <h3 class="person-name">{{ p.name }}</h3>
+            <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
+            <div class="actions">
+              {% if p.links %}
+                {% assign email = p.links | where: "label", "Email" | first %}
+                {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
+              {% endif %}
+              {% if p.content %}
+                {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
+                <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="person-details" id="details-phd-{{ forloop.index }}">
+            {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
             {% if p.links %}
-              {% assign email = p.links | where: "label", "Email" | first %}
-              {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
-            {% endif %}
-            {% if p.content %}
-              {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
-              <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+            <div class="links">
+              {% for l in p.links %}
+                <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+              {% endfor %}
+            </div>
             {% endif %}
           </div>
-        </div>
-        <div class="person-details" id="details-phd-{{ forloop.index }}">
-          {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
-          {% if p.links %}
-          <div class="links">
-            {% for l in p.links %}
-              <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </article>
+        </article>
+      </div>
       {% endfor %}
     </div>
   </section>
@@ -127,40 +131,42 @@ collaborators: []
   {% if page.msc and page.msc.size > 0 %}
   <section class="people-section">
     <h2>MSc</h2>
-    <div class="grid" data-category="msc">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" data-category="msc">
       {% for p in page.msc %}
-      <article class="person-card" tabindex="0">
-        <div class="person-media">
-          {% if p.image %}
-            {% assign img_path = p.image | prepend: 'assets/img/' %}
-            {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
-          {% endif %}
-        </div>
-        <div class="person-header">
-          <h3 class="person-name">{{ p.name }}</h3>
-          <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
-          <div class="actions">
+      <div class="col mb-4">
+        <article class="person-card h-100" tabindex="0">
+          <div class="person-media">
+            {% if p.image %}
+              {% assign img_path = p.image | prepend: 'assets/img/' %}
+              {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
+            {% endif %}
+          </div>
+          <div class="person-header">
+            <h3 class="person-name">{{ p.name }}</h3>
+            <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
+            <div class="actions">
+              {% if p.links %}
+                {% assign email = p.links | where: "label", "Email" | first %}
+                {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
+              {% endif %}
+              {% if p.content %}
+                {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
+                <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="person-details" id="details-msc-{{ forloop.index }}">
+            {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
             {% if p.links %}
-              {% assign email = p.links | where: "label", "Email" | first %}
-              {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
-            {% endif %}
-            {% if p.content %}
-              {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
-              <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+            <div class="links">
+              {% for l in p.links %}
+                <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+              {% endfor %}
+            </div>
             {% endif %}
           </div>
-        </div>
-        <div class="person-details" id="details-msc-{{ forloop.index }}">
-          {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
-          {% if p.links %}
-          <div class="links">
-            {% for l in p.links %}
-              <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </article>
+        </article>
+      </div>
       {% endfor %}
     </div>
   </section>
@@ -169,40 +175,42 @@ collaborators: []
   {% if page.bsc and page.bsc.size > 0 %}
   <section class="people-section">
     <h2>BSc</h2>
-    <div class="grid" data-category="bsc">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" data-category="bsc">
       {% for p in page.bsc %}
-      <article class="person-card" tabindex="0">
-        <div class="person-media">
-          {% if p.image %}
-            {% assign img_path = p.image | prepend: 'assets/img/' %}
-            {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
-          {% endif %}
-        </div>
-        <div class="person-header">
-          <h3 class="person-name">{{ p.name }}</h3>
-          <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
-          <div class="actions">
+      <div class="col mb-4">
+        <article class="person-card h-100" tabindex="0">
+          <div class="person-media">
+            {% if p.image %}
+              {% assign img_path = p.image | prepend: 'assets/img/' %}
+              {% include figure.liquid path=img_path alt=p.name class='img-fluid z-depth-1 rounded' loading='lazy' cache_bust=true %}
+            {% endif %}
+          </div>
+          <div class="person-header">
+            <h3 class="person-name">{{ p.name }}</h3>
+            <p class="person-meta">{{ p.university }}{% if p.department %} · {{ p.department }}{% endif %}</p>
+            <div class="actions">
+              {% if p.links %}
+                {% assign email = p.links | where: "label", "Email" | first %}
+                {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
+              {% endif %}
+              {% if p.content %}
+                {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
+                <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="person-details" id="details-bsc-{{ forloop.index }}">
+            {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
             {% if p.links %}
-              {% assign email = p.links | where: "label", "Email" | first %}
-              {% if email %}<a class="btn btn-sm btn-secondary" href="{{ email.url }}">Email</a>{% endif %}
-            {% endif %}
-            {% if p.content %}
-              {% capture content_path %}/people/{{ p.name | downcase | replace: ' ', '-' }}/{% endcapture %}
-              <a class="btn btn-sm" href="{{ content_path | relative_url }}">See more</a>
+            <div class="links">
+              {% for l in p.links %}
+                <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+              {% endfor %}
+            </div>
             {% endif %}
           </div>
-        </div>
-        <div class="person-details" id="details-bsc-{{ forloop.index }}">
-          {% if p.bio %}<p>{{ p.bio }}</p>{% endif %}
-          {% if p.links %}
-          <div class="links">
-            {% for l in p.links %}
-              <a class="btn btn-sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </article>
+        </article>
+      </div>
       {% endfor %}
     </div>
   </section>
@@ -224,22 +232,25 @@ collaborators: []
   #people-page .people-section { 
     margin-bottom: 3rem;
   }
-  #people-page .grid { 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
+  #people-page .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
   }
-  @media (max-width: 768px) { 
-    #people-page .grid {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
+  
+  #people-page .col {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    #people-page .row {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
     }
-  }
-  @media (max-width: 576px) { 
-    #people-page .grid {
-      grid-template-columns: 1fr;
+    #people-page .col {
+      padding: 0 0.5rem;
     }
   }
 
@@ -259,6 +270,7 @@ collaborators: []
     overflow: hidden;
     height: 100%;
     min-height: 400px;
+    margin-bottom: 0;
   }
   #people-page .person-card:hover { 
     transform: translateY(-5px); 
