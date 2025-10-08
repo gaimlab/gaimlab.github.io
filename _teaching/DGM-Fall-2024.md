@@ -172,25 +172,44 @@ website: "https://generative-ai-sut.github.io/"
     color: var(--global-theme-color);
     font-weight: 500;
   }
-  #course-page .info-cards {
+  #course-page .info-cards { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
-  #course-page .info-card {
-    background-color: var(--global-code-bg-color);
-    padding: 1rem;
-    border-radius: 6px;
+  @media (max-width: 768px) { 
+    #course-page .info-cards { 
+      grid-template-columns: 1fr; 
+    } 
   }
+  
+  /* Info card styling */
+  #course-page .info-card {
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 2px 8px var(--global-divider-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  #course-page .info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--global-divider-color) 50%, transparent);
+  }
+  
   #course-page .info-card .label {
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
-  }
-  #course-page .info-card .value {
-    color: var(--global-text-color);
-    font-weight: 500;
-    margin-top: 0.25rem;
+    font-size: 0.85rem;
     display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  #course-page .info-card .value {
+    color: var(--global-theme-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.3;
   }
   #course-page .checklist {
     list-style: none;
@@ -346,21 +365,29 @@ website: "https://generative-ai-sut.github.io/"
     background-color: var(--global-code-bg-color);
   }
   
-  /* Ensure text colors in info cards */
-  #course-page .info-card {
+  /* Section styling */
+  #course-page .section { 
+    margin-top: 1.5rem; 
+  }
+  
+  #course-page .section-title { 
+    margin: 0 0 1rem; 
+    font-size: 1.3rem;
     color: var(--global-text-color);
+    position: relative;
+    padding-bottom: 0.5rem;
   }
-  #course-page .info-card .value {
-    color: var(--global-theme-color);
+  
+  #course-page .section-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--global-theme-color);
+    border-radius: 3px;
   }
-
-  #course-page .section { margin-top: .75rem; }
-  #course-page .section-title { margin: 0 0 .4rem; font-size: 1.2rem; }
-  #course-page .info-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .5rem; }
-  @media (max-width: 768px) { #course-page .info-cards { grid-template-columns: 1fr; } }
-  #course-page .info-card { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 10px; padding: .6rem .75rem; box-shadow: 0 2px 8px rgba(0,0,0,.03); }
-  #course-page .info-card .label { display: block; font-size: .8rem; color: #666; }
-  #course-page .info-card .value { font-weight: 600; }
 
   #course-page .checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .35rem .75rem; }
   @media (max-width: 576px) { #course-page .checklist { grid-template-columns: 1fr; } }
