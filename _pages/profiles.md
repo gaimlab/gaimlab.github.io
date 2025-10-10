@@ -38,27 +38,48 @@ msc:
         url: mailto:momenihamaneh1381@gmail.com
 bsc:
   - name: Borna Khodabandeh
-    image:
+    image: logo.png
     university: Sharif University of Technology
     department: Electrical Engineering
     bio: BSc student working on robust learning and reinforcement learning algorithms.
-    content:
+    content: about_borna.md
     links:
       - label: Email
         url: mailto:borna710kh@gmail.com
   - name: Amir Abbas Afzali
-    image:
+    image: logo.png
     university: Sharif University of Technology
     department: Electrical Engineering
     bio: BSc student focusing on trustworthy machine learning and adversarial robustness.
-    content:
+    content: about_abbas.md
     links:
       - label: Email
         url: mailto:amir8afzali@gmail.com
-collaborators: []
-  # - name: Mohammad Parsa Dini
-  #   university: Sharif University of Technology
-  #   department: Electrical Engineering
+  - name: Mohammad Mahdi Razmjoo
+    image: razmjoo.png
+    university: Sharif University of Technology
+    department: Electrical Engineering
+    bio: BSc student focusing on robust learning and Generative Models.
+    content: about_razmjoo.md
+    links:
+      - label: Email
+        url: mailto:m.mahdi.razmjoo@gmail.com
+collaborators:
+  - name: Behrad Jahani
+    university: Sharif University of Technology
+    department: Department of Computer Engineering
+  - name: Mohammad Mohammadianbisheh
+    university: Sharif University of Technology
+    department: Department of Electrical Engineering
+  - name: Sarina Heshmati
+    university: Amirkabir University of Technology
+    department: Department of Computer Science
+  - name: Parsa Ghezelbash
+    university: Sharif University of Technology
+    department: Department of Computer Engineering
+  - name: Arman Yazdani
+    university: Sharif University of Technology
+    department: Department of Electrical Engineering
 ---
 <div id="people-page">
   {% if page.faculty and page.faculty.size > 0 %}

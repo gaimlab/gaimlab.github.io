@@ -37,19 +37,10 @@ nav: false
     </aside>
 
     <article class="profile-main">
-      <div class="panel">
-        <h3 class="panel-title">Education</h3>
-        <ul class="timeline">
-        </ul>
-      </div>
 
       <div class="panel">
         <h3 class="panel-title">About Me</h3>
         <p>Greetings! I'm Sajjad Amini, proudly serving as an Assistant Professor at the Electronics Research Institute, Sharif University of Technology. As a dedicated professional, I specialize in Machine Learning, with a keen focus on Deep Generative Models and Robust Deep Learning, constantly striving to advance knowledge and innovation in these dynamic fields. At Sharif University, my work revolves around groundbreaking research in adversarial attacks and defenses, deepfake detection, and advancing contrastive learning in speech processing. My teaching portfolio features courses like Introduction to Machine Learning and Linear Algebra. Alongside my academic pursuits, I have authored several papers in esteemed journals and conferences, emphasizing the robustness of deep neural networks and other innovative topics.</p>
-      </div>
-
-      <div class="panel">
-        <h3 class="panel-title">Achievements</h3>
       </div>
 
 <style>

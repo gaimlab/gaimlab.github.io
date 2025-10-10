@@ -1,18 +1,18 @@
 ---
 layout: page
 title:
-permalink: /people/mohammad-eshtehardian/
+permalink: /people/mohammad-mahdi-razmjoo/
 nav: false
 ---
 
 <div id="profile-page">
   <header class="profile-header">
     <div class="profile-title">
-      <h1>Mohammad Eshtehardian</h1>
-      <p class="subtitle">PhD Student · Sharif University of Technology · Electrical Engineering</p>
+      <h1>Mohammad Mahdi Razmjoo</h1>
+      <p class="subtitle">BSc in Electrical Engineering - Communication Systems, Sharif University of Technology, 2021-2025</p>
     </div>
     <div class="profile-photo">
-      {% include figure.liquid path="assets/img/mohammad.jpg" alt="Mohammad Eshtehardian" class="img-fluid z-depth-1 rounded" loading="lazy" cache_bust=true %}
+      {% include figure.liquid path="assets/img/razmjoo.png" alt="Mohammad Mahdi Razmjoo" class="img-fluid z-depth-1 rounded" loading="lazy" cache_bust=true %}
     </div>
   </header>
 
@@ -21,19 +21,17 @@ nav: false
       <div class="panel">
         <h3 class="panel-title">Research Interests</h3>
         <ul class="tags">
-          <li>Vector-Field Generative AI Models</li>
-          <li>Machine Learning Theory</li>
-          <li>Reinforcement Learning</li>
-          <li>Information Theory</li>
+          <li>Robustness</li>
+          <li>Generative models</li>
         </ul>
       </div>
 
       <div class="panel">
         <h3 class="panel-title">Contact</h3>
-        <p><a class="btn btn-sm" href="mailto:m.eshtehardian@yahoo.com">Email</a></p>
+        <p><a class="btn btn-sm" href="mailto:m.mahdi.razmjoo@gmail.com">Email</a></p>
         <div class="links">
-          <a class="btn btn-sm btn-secondary" href="https://github.com/MohammadEshtehardian" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-sm btn-secondary" href="https://www.linkedin.com/in/mohammad-eshtehardian/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-sm btn-secondary" href="https://github.com/M-Mahdi-Razmjoo" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-sm btn-secondary" href="https://www.linkedin.com/in/m-mahdi-razmjoo/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </aside>
@@ -43,30 +41,15 @@ nav: false
         <h3 class="panel-title">Education</h3>
         <ul class="timeline">
           <li>
-            <strong>PhD in Electrical Engineering - Communication Systems</strong>
-            <p>Sharif University of Technology<br>2025 - Present</p>
-          </li>
-          <li>
-            <strong>MSc in Electrical Engineering - Communication Systems</strong>
-            <p>Sharif University of Technology<br>2023 - 2025</p>
-          </li>
-          <li>
             <strong>BSc in Electrical Engineering - Communication Systems</strong>
-            <p>Sharif University of Technology<br>2019 - 2023</p>
+            <p>Sharif University of Technology<br>2021 - 2025</p>
           </li>
         </ul>
       </div>
 
       <div class="panel">
         <h3 class="panel-title">About Me</h3>
-        <p>As a PhD candidate in Electrical Engineering at Sharif University of Technology, I'm at the forefront of AI research, specializing in Vector-Field Generative Models and their theoretical underpinnings. My work bridges deep learning, information theory, and reinforcement learning to pioneer more efficient and interpretable AI systems. With a comprehensive academic journey that spans from my Bachelor's to PhD at Sharif University, I've cultivated a unique blend of theoretical depth and practical ML expertise. My research not only advances the mathematical foundations of AI but also translates these innovations into real-world applications, pushing the boundaries of what's possible in generative modeling and intelligent systems.</p>
-      </div>
-
-      <div class="panel">
-        <h3 class="panel-title">Achievements</h3>
-        <ul class="bullets">
-          <li><strong>🥇 Gold Medal</strong>, Iranian Physics Olympiad, 2018</li>
-        </ul>
+        <p>My work focuses on adversarial training and improving model robustness. I also explore generative models and their practical applications.</p>
       </div>
 
 <style>
